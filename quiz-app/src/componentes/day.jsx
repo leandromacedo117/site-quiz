@@ -12,15 +12,18 @@ const day = () => {
           <h5>Sab</h5>
           <h5>dom</h5>
         </div>
-        <div className="days">
-            
-            <h4>1</h4>
-            <h4>2</h4>
-            <h4>3</h4>
-            <h4>4</h4>
-            <h4>5</h4>
-            <h4>6</h4>
-            <h4>7</h4>
+        <div className="days span">
+            <div className="void">
+                <div className="content">
+                    <h4>1</h4>
+                    <h4>2</h4>
+                    <h4>3</h4>
+                    <h4>4</h4>
+                    <h4>5</h4>
+                    <h4>6</h4>
+                    <h4>7</h4>
+                </div>
+            </div>
         </div>
     </div>
   )

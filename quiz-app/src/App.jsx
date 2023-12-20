@@ -3,14 +3,20 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Day from './componentes/day'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+    // <!-- css of project -->
+    
     <div className="App">
-      <div className="time-day">
-        <Day></Day>
-      </div>
+      
+      <header className="time-day">
+        <div className="container-day">
+            <Day></Day>
+        </div>
+      </header>
     </div>
   )
 }
