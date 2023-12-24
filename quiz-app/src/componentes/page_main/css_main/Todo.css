@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Todo{
+    color: #000;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+    border-radius: 15px 15px 0 0 ;
+    
+}
+
+.menu-todo ul{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around   ;
+    list-style-type: none;
+    color: #fff;
+}
+
+.menu-todo ul li{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.color-green{
+    background-color: #06E00E;
+     padding: 6px 15px; 
+    border-radius: 30px;
+}
+
+.list-todo{
+    padding-top: 40px;
+   
+    font-size: 2rem;
+    border-radius: 20px;
+
+}
+.list-content-todo{
+   background-color: rgb(255, 255, 255);
+   border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    padding:10px 0 0 0 ;
+    margin-bottom: 0px;
+    
+}
+
+
+
+.banner-quiz{
+    display: flex;
+    align-items: center;
+}
+
+.name-quiz-h{
+    padding-left: 20px;
+}
+
+.banner-acam{
+    padding: 20px;
+    
+
+}
+
+@media (max-width: 999px){
+
+    
+    .menu-todo ul{
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center   ;
+        gap: 3rem;
+        list-style-type: none;
+        color: #fff;
+    }
+
+    .menu-todo ul li{
+        font-size: 1.4rem;
+        
+    }
+
+    .list-content-todo{
+        
+        font-size: 1.4rem;
+         /* padding:5px 0 5px; */
+         /* padding-bottom: 10px; */
+         margin-bottom: 10px;
+     }
+}

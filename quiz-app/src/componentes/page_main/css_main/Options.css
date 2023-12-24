@@ -1,0 +1,22 @@
+.Options{
+    background-color: #202020;
+    padding-top:140px ;  
+}
+
+.options-content{
+    color: #000000;
+    margin-top: 20px;
+    padding-top:190px ;
+    padding: 30px;
+    background-color: #06E00E;
+
+}
+
+.options-icons{
+
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    align-items: center;
+}
