@@ -1,6 +1,8 @@
+
+@media (max-width: 999px){
 .Options{
     background-color: #202020;
-    padding-top:140px ;  
+    padding-top:100px ;  
 }
 
 .options-content{
@@ -19,4 +21,5 @@
     justify-content: space-around;
     gap: 4rem;
     align-items: center;
+}
 }

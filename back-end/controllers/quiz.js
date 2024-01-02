@@ -1,6 +1,7 @@
 import {data} from "../data.js"
 
 export const getUsers  = (req, res) =>{
+    
     const queryy = "SELECT * FROM quizUser"
 
     data.query(queryy, (err, date) => {
