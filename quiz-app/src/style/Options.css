@@ -2,13 +2,15 @@
 @media (max-width: 999px){
 .Options{
     background-color: #202020;
-    padding-top:100px ;  
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .options-content{
     color: #000000;
-    margin-top: 20px;
-    padding-top:190px ;
+    
     padding: 30px;
     background-color: #06E00E;
 
@@ -23,3 +25,31 @@
     align-items: center;
 }
 }
+
+
+@media (max-width: 360px){
+    .Options{
+        background-color: #202020;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .options-content{
+        color: #000000;
+        
+        padding: 30px;
+        background-color: #06E00E;
+    
+    }
+    
+    .options-icons{
+    
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-around;
+        gap: 3rem;
+        align-items: center;
+    }
+    }

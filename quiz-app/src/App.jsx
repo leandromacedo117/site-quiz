@@ -1,7 +1,7 @@
 import './App.css';
-import Day from './componentes/Day'
 import Todo from './componentes/Todo';
 import Options from './componentes/Options';
+import Day from './componentes/day'
 
 function App() {
 

@@ -9,10 +9,15 @@
 
 
 .day{
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #000;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #303030;
+    
 }
 
 
@@ -50,7 +55,7 @@
    
 }
 
-.seg{
+/* .seg{
     margin-left: 45px;
     padding-right: 5px;
 }
@@ -61,7 +66,7 @@
 
 .sex{
     margin-left: 10px;
-}
+} */
 
 .day-num-h4{
     font-size: .8rem;
@@ -79,7 +84,7 @@
 
 
 
-@media (max-width: 999px){
+@media (min-width: 375px){
     .week{
         /* margin-left: 5px; */
         gap: 1rem;
@@ -111,8 +116,78 @@
     }
 
     .dom{
+
         padding-right: 36px;
     }
 
     
 }
+
+@media (max-width: 374px){
+
+    
+    .week{
+        font-size: 2rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .content{
+        gap: 0.5rem;
+    }
+
+    
+    
+    .day-num-h5{
+      
+        margin-right: 0px;
+        padding: 0 3px 0 5px ;
+    }
+
+    .seg{
+        margin-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .ter{
+        padding-right: 0px;
+      
+    }
+    
+    .sex{
+        padding-left: 0px;
+        padding-right: 0px; 
+        margin-left: 0px;
+    }
+
+    .dom{
+        
+        background-color:#000;
+    }
+
+    .sete{
+        margin-right: 0;
+    }
+
+    .day-num-h4{
+        padding:18px;
+        font-size: .8rem;
+    }
+
+    
+}
+
+@media(min-width : 700px) {
+    .content{
+        gap: 2.5rem;
+    }
+
+    .day-num-h4{
+        padding: 30px;
+        font-size: 1.4rem;
+    }
+}
+
