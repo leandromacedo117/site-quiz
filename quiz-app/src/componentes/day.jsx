@@ -1,7 +1,7 @@
-import './css_main/day.css'
+import '../style/day.css'
 import { HiCheck } from "react-icons/hi";
 
-const day = () => {
+const Day = () => {
   return (
     <div className="day">
         <div className="week">
@@ -30,4 +30,4 @@ const day = () => {
   )
 }
 
-export default day
+export default Day

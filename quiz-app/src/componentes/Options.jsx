@@ -1,4 +1,4 @@
-import './css_main/Options.css'
+import '../style/Options.css'
 
 // icons use
 import { CgMenu } from "react-icons/cg";
