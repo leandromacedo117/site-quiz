@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import './css_main/Todo.css'
+import '../style/Todo.css'
 import { HiAcademicCap } from "react-icons/hi";
-import API from './api/api';
+import API from '../data/api';
 
 
 const Todo = () => {
@@ -42,6 +42,7 @@ const Todo = () => {
           <li className="list-name button-list" onClick={revisaoOnclick}  style={{backgroundColor: '#202020'}}><p  className={revisao ? 'color-green' : ''}>Revisão</p></li>
         </ul>
       </div>
+      
       {dataFromApi.map(item => (
         <div key={item.id}>
           <div className="list-todo">

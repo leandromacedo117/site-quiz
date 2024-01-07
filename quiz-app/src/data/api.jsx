@@ -1,6 +1,6 @@
 // DataFetchingComponent.jsx
 import { useState, useEffect } from 'react';
-import api from '../../../../api';
+import api from '../../api';
 
 const DataFetchingComponent = () => {
   const [dataFromApi, setDataFromApi] = useState([]);

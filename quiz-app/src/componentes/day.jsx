@@ -1,4 +1,4 @@
-import './css_main/day.css'
+import '../style/day.css'
 import { HiCheck } from "react-icons/hi";
 
 const day = () => {
