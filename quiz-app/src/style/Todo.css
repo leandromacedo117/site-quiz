@@ -14,6 +14,10 @@
     
 }
 
+.menu-todo{
+    margin-bottom: 38px;
+}
+
 .menu-todo ul{
     padding-top: 10px;
     display: flex;
@@ -21,6 +25,7 @@
     justify-content: space-around   ;
     list-style-type: none;
     color: #fff;
+  
 }
 
 .menu-todo ul li{
@@ -30,8 +35,9 @@
 
 .color-green{
     background-color: #06E00E;
-     padding: 6px 15px; 
+    padding: 6px 15px; 
     border-radius: 30px;
+    font-size: 1.6rem;
 }
 
 .list-todo{
@@ -42,13 +48,14 @@
 
 }
 .list-content-todo{
+    
    background-color: rgb(255, 255, 255);
    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
-    padding:10px 0 0 0 ;
+    padding:10px ;
     margin: 20px 0 0px 0 ;
     
 }
@@ -58,19 +65,23 @@
 .banner-quiz{
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.icon-studies{
+    display: flex;
+    align-items: center;
+    cursor: default;
 }
 
 .name-quiz-h{
     padding-left: 20px;
 }
 
-.banner-acam{
-    padding: 20px;
-    
 
-}
 
-@media (max-width: 999px){
+
+@media (min-width: 400px){
 
     
     .menu-todo ul{
@@ -95,4 +106,52 @@
          /* padding-bottom: 10px; */
          margin-bottom: 10px;
      }
+
+     .icon-studies{
+        font-size: 3rem;
+        
+     }
+
+
+    
+
+   
+}
+
+@media (max-width: 374px){
+
+    .Todo{
+        border-radius: 20px 20px 0 0 ;
+    }
+    .menu-todo ul{
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center   ;
+        gap: 1.5rem; 
+        list-style-type: none;
+        color: #fff;
+
+    }
+
+    .menu-todo ul li{
+        font-size: 1.4rem;
+        
+    }
+
+    .list-content-todo{
+        
+        font-size: 1.2rem;
+        justify-content: space-around;
+        gap: 0.75;
+         margin-bottom: 10px;
+     }
+
+
+     .icon-studies{
+        font-size: 2.7rem;
+        
+     }
+
+   
 }

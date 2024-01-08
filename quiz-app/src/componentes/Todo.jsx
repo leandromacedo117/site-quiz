@@ -8,7 +8,7 @@ const Todo = () => {
   const dataFromApi = API()
 
   // const [colora, setColor] = useState('#202020');
-  const listButton = document.querySelector('button-list')
+
   const [recentes, setRecentes] = useState(false)
   const [todos, setTodos] = useState(false)
   const [revisao, setRevisao] = useState(false)
@@ -42,7 +42,6 @@ const Todo = () => {
           <li className="list-name button-list" onClick={revisaoOnclick}  style={{backgroundColor: '#202020'}}><p  className={revisao ? 'color-green' : ''}>Revisão</p></li>
         </ul>
       </div>
-      
       {dataFromApi.map(item => (
         <div key={item.id}>
           <div className="list-todo">
@@ -50,7 +49,9 @@ const Todo = () => {
             
                     
               <div className="banner-quiz">
-                <HiAcademicCap  />
+                <div className="icon-studies">
+                   <HiAcademicCap  />
+                </div>
                 <h3 className="name-quiz-h">
                 <p>{item.quizName}</p>  
                 </h3>
