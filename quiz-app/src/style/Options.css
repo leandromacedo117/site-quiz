@@ -7,7 +7,6 @@
     right: 0;
     left: 0;
 }
-
 .options-content{
     color: #000000;
     
@@ -52,4 +51,4 @@
         gap: 3rem;
         align-items: center;
     }
-    }
+}
