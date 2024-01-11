@@ -1,8 +1,7 @@
 import { useRef, useState } from 'react';
 import '../style/Todo.css'
-import { HiAcademicCap } from "react-icons/hi";
 import API from '../data/api';
-
+import Card from './Card.jsx';
 
 const Todo = () => {
   const dataFromApi = API()
@@ -10,25 +9,28 @@ const Todo = () => {
   // const [colora, setColor] = useState('#202020');
 
   const [recentes, setRecentes] = useState(false)
-  const [todos, setTodos] = useState(false)
+  const [todos, setTodos] = useState(true)
   const [revisao, setRevisao] = useState(false)
+  const [option, setOption] = useState("todos")
   
   const recentesOnclick = () =>{
-    setRecentes(!recentes)
+    setRecentes(true)
     setTodos(false)
     setRevisao(false)
+    setOption("recentes")
   }
   const todosOnclick = () =>{
-    setTodos(!todos)
+    setTodos(true)
     setRecentes(false)
     setRevisao(false)
-    
+    setOption("todos")
   }
   
   const revisaoOnclick = () =>{
-    setRevisao(!revisao)
+    setRevisao(true)
     setRecentes(false)
     setTodos(false)
+    setOption("revisao")
     }
 
     const ref = useRef()
@@ -44,25 +46,11 @@ const Todo = () => {
       </div>
       {dataFromApi.map(item => (
         <div key={item.id}>
-          <div className="list-todo">
-            <div className="list-content-todo">
-            
-                    
-              <div className="banner-quiz">
-                <div className="icon-studies">
-                   <HiAcademicCap  />
-                </div>
-                <h3 className="name-quiz-h">
-                <p>{item.quizName}</p>  
-                </h3>
-              </div>
-              <p>{item.numberQuestion}</p>
-            </div>
-
-            
-          
-          </div>
-        </div> 
+          <Card 
+            item={item}
+            option={option}
+          />
+        </div>
       ))}
       
     </div>

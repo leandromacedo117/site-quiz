@@ -28,25 +28,77 @@ app.use('/test', (req,res) =>{
      {
         'id' : 1,
         'quizName' : 'quiz121',
-        'numberQuestion' : 31
+        'numberQuestion' : 3,
+        'LastTimeDone': new Date("2024-01-03"),
+        'DayToNextRetrieval': 4,
+        'nRetrieval': 3,
+        'quizzes' : [
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         },
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         },
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         }
+        ]
      },
 
      {
         'id' : 2,
         'quizName' : 'quiz122',
-        'numberQuestion' : 0
+        'numberQuestion' : 1,
+        'LastTimeDone': new Date("2024-01-11"),
+        'DayToNextRetrieval': 3,
+        'nRetrieval': 2,
+        'quizzes' : [
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         }
+        ]
      },
 
      {
         'id' : 3,
         'quizName' : 'quiz123',
-        'numberQuestion' : 99
+        'numberQuestion' : 3,
+        'LastTimeDone': new Date("2024-01-03"),
+        'DayToNextRetrieval': 4,
+        'nRetrieval': 3,
+        'quizzes' : [
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         },
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         },
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         }
+        ]
      },
 
      {
         'id' : 4,
         'quizName' : 'quiz124',
-        'numberQuestion' : 1
+        'numberQuestion' : 1,
+        'LastTimeDone': new Date("2024-01-11"),
+        'DayToNextRetrieval': 3,
+        'nRetrieval': 2,
+        'quizzes' : [
+         {
+            Question: "Pergunta?",
+            Answer: "Resposta!"
+         }
+        ]
      },
 
     ])
