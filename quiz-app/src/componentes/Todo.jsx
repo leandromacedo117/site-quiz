@@ -7,8 +7,6 @@ import API from '../data/api';
 const Todo = () => {
   const dataFromApi = API()
 
-  // const [colora, setColor] = useState('#202020');
-
   const [recentes, setRecentes] = useState(false)
   const [todos, setTodos] = useState(false)
   const [revisao, setRevisao] = useState(false)
@@ -31,7 +29,7 @@ const Todo = () => {
     setTodos(false)
     }
 
-    const ref = useRef()
+   
   
   return (
     <div className="Todo">
