@@ -33,6 +33,11 @@
     cursor: pointer;
 }
 
+.menu-todo ul li p {
+    color: #fff;
+
+}
+
 .color-green{
     background-color: #06E00E;
     padding: 6px 15px; 

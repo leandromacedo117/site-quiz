@@ -1,3 +1,6 @@
+.options-icons span .Link{
+    color: #000000;
+}
 
 @media (max-width: 999px){
 .Options{
@@ -16,7 +19,6 @@
 }
 
 .options-icons{
-
     font-size: 2rem;
     display: flex;
     justify-content: space-around;
