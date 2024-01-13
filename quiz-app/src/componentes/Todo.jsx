@@ -6,8 +6,6 @@ import Card from './Card.jsx';
 const Todo = () => {
   const dataFromApi = API()
 
-  // const [colora, setColor] = useState('#202020');
-
   const [recentes, setRecentes] = useState(false)
   const [todos, setTodos] = useState(true)
   const [revisao, setRevisao] = useState(false)
@@ -33,7 +31,7 @@ const Todo = () => {
     setOption("revisao")
     }
 
-    const ref = useRef()
+   
   
   return (
     <div className="Todo">
