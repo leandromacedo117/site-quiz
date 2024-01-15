@@ -1,6 +1,6 @@
 import { HiAcademicCap } from "react-icons/hi";
 
-function content () {
+function Content ({ item }) {
     return (
         <div className="list-todo">
             <div className="list-content-todo">       
@@ -16,17 +16,19 @@ function content () {
             </div>
         </div>
     )
-    
 }
 
 const Card = ({ item, option }) => {
-    const data = new Date();
-    console.log(data.getData());
-    console.log(item.LastTimeDone.getDate());
+    const data = new Date("09-01-2023");
+    // console.log(data.getDate())
+    // console.log(item.LastTimeDone);
+    // const a = item.LastTimeDone;
+    // a.setDate(a.getDate() + item.DayToNextRetrieval);
     if (option == "todos") {
-        return content
+        return <Content item={item} />
     }
-    else if (option == "revisao" && item.LastTimeDone.setDate(item.LastTimeDone.getDate() + item.DayToNextRetrieval) >= data) {
+    else if (option == "revisao" && a >= data) {
+        return <Content item={item} />
     }
 }
 
