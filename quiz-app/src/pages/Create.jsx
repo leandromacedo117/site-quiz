@@ -1,7 +1,9 @@
+import UseProgress from '../hooks/useProgressBar'
 function Create() {
+
   return (
     <center>
-      <h1>Página de ver adicionar ou criar quizzes</h1>
+      <UseProgress></UseProgress>
     </center>
   )
 }
