@@ -11,14 +11,23 @@ const useInterval = () => {
     const [saturday,setSaturday] = useState(null);
 
     // full days 
-    const [completedDay, setCompletedDay] = useState(null);
-
-    // user login 
-    const [loginToday, setLoginToday] = useState(false)
+    const [completedDay, setCompletedDay] = useState(null); //funciona de acordo com o dia atual da semana
+    
+    // day of the week the user logged in 
+    const [loginSundayCompleted, setLoginSundayCompleted] = useState(false)
+    const [loginMondayCompleted, setLoginMondayCompleted] = useState(false)
+    const [loginTuesdayCompleted, setLoginTuesdayCompleted] = useState(false)
+    const [loginWednesdayCompleted, setLoginWednesdayCompleted] = useState(false)
+    const [loginThursdayCompleted, setLoginThursdayCompleted] = useState(false)
+    const [loginFridayCompleted, setLoginFridayCompleted] = useState(false)
+    const [loginSaturdayCompleted, setLoginSaturdayCompleted] = useState(false)
+    
+    
 
     const countDown = () => {
         let today = new Date();
         let currentDay = new Date(today)
+        
         
             
         // dias seguintes
@@ -36,7 +45,7 @@ const useInterval = () => {
  
          // current day
          const nameCurrentDay = mapDate.format(currentDay);
-         console.log(nameCurrentDay)
+    
          // next days
          const nameDayFirst = mapDate.format(firstDay);
          const nameDaySegund = mapDate.format(segundDay);
@@ -44,6 +53,14 @@ const useInterval = () => {
          const nameDayFour = mapDate.format(fourDay);
          const nameDayFifth = mapDate.format(fifthDay);
          const nameDaySixth = mapDate.format(sixthDay);
+
+
+         
+            let currentHour = today.getHours();
+            let initHours = 23
+            let rest = initHours - currentHour
+            
+         
 
         const checkingDay = (nameCurrentDay) => {
 
@@ -60,7 +77,9 @@ const useInterval = () => {
                     fourDay.setDate(today.getDate() + 4); 
                     fifthDay.setDate(today.getDate() + 5); 
                     sixthDay.setDate(today.getDate() + 6); 
+
                     setCompletedDay(1)
+                    setLoginSundayCompleted(false)
                     
                     break
 
@@ -75,8 +94,9 @@ const useInterval = () => {
                     fourDay.setDate(today.getDate() + 3); 
                     fifthDay.setDate(today.getDate() + 4); 
                     sixthDay.setDate(today.getDate() + 5); 
+
                     setCompletedDay(2)
-                    
+                    setLoginMondayCompleted(true)
                     break
 
                 case 'terça-feira':
@@ -90,6 +110,8 @@ const useInterval = () => {
                     fourDay.setDate(today.getDate() + 2); 
                     fifthDay.setDate(today.getDate() + 3); 
                     sixthDay.setDate(today.getDate() + 4); 
+
+                    setLoginTuesdayCompleted(true)
                     setCompletedDay(3)
                     
                     break  
@@ -105,6 +127,8 @@ const useInterval = () => {
                     fourDay.setDate(today.getDate() + 1 ); 
                     fifthDay.setDate(today.getDate() + 2); 
                     sixthDay.setDate(today.getDate() + 3); 
+
+                    setLoginWednesdayCompleted(true)
                     setCompletedDay(4)
                     
                     break  
@@ -119,7 +143,9 @@ const useInterval = () => {
                     thirdDay.setDate(today.getDate() - 1); 
                     fourDay.setDate(today.getDate() + 0 ); 
                     fifthDay.setDate(today.getDate() + 1); 
-                    sixthDay.setDate(today.getDate() + 2); 
+                    sixthDay.setDate(today.getDate() + 2);
+                    
+                    setLoginThursdayCompleted(true)
                     setCompletedDay(5)
                     
                     break
@@ -133,7 +159,9 @@ const useInterval = () => {
                     thirdDay.setDate(today.getDate() - 2); 
                     fourDay.setDate(today.getDate() - 1 ); 
                     fifthDay.setDate(today.getDate() + 0); 
-                    sixthDay.setDate(today.getDate() + 1); 
+                    sixthDay.setDate(today.getDate() + 1);
+                    
+                    setLoginFridayCompleted(true)
                     setCompletedDay(6)
                     
                     break  
@@ -148,6 +176,8 @@ const useInterval = () => {
                     fourDay.setDate(today.getDate() - 2); 
                     fifthDay.setDate(today.getDate() - 1); 
                     sixthDay.setDate(today.getDate() + 0); 
+
+                    setLoginSaturdayCompleted(true)
                     setCompletedDay(7)
                     
                     break       
@@ -181,7 +211,10 @@ const useInterval = () => {
         return () => clearInterval(intervalWeek);
     }, []);
     // returning days of the week 
-    return [sunday, monday, tuesday, wednesday, thursday, friday, saturday, completedDay];
+    return [
+        sunday, monday, tuesday, wednesday, thursday, friday, saturday,
+        completedDay, loginMondayCompleted, loginSundayCompleted, loginTuesdayCompleted, loginWednesdayCompleted, loginThursdayCompleted, loginFridayCompleted, loginSaturdayCompleted
+          ];
 };
 
 export default useInterval;

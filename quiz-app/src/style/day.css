@@ -4,7 +4,8 @@
     box-sizing: border-box;
     
 }
- 
+
+
 
 
 
@@ -48,6 +49,7 @@
     gap: 5rem;
     justify-content: center;
     padding-bottom: 24px;
+    color: #000;
 }
 .day-num-h5{
     font-size: 13px;
@@ -73,20 +75,26 @@
     color: #000000;
 }
 
-/* icons  */
-.icone-h4{
-    font-size: 1.2rem;
-    
-}
+
 
 /* dias feitos e não feitos */
 .finally-day{
     background-color: #06E00E;
-}
-.incomplete-day{
-    background-color: #ff0b0b;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
+
+.incomplete-day{
+    background-color: #ff0b0b;
+    color: #000;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+span{
+    color:  black;
+}
 @media (min-width: 390px){
     .week{
         padding-left: 10px;
@@ -95,6 +103,7 @@
 
     .content{
         gap: 1rem;
+        
     }
 
     .day-num-h5{
@@ -105,6 +114,7 @@
            
         
     }
+    
 
     
 }
@@ -129,6 +139,7 @@
     .day-num-h4{
         padding:18px;
         font-size: .8rem;
+        
     }
 
     
