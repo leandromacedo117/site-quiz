@@ -2,7 +2,7 @@
     color: #000000;
 }
 
-@media (max-width: 999px){
+/* @media (max-width: 999px){ */
 .Options{
     background-color: #202020;
     position: fixed;
@@ -24,7 +24,6 @@
     justify-content: space-around;
     gap: 4rem;
     align-items: center;
-}
 }
 
 
