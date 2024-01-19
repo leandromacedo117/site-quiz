@@ -1,28 +1,24 @@
 import express from "express"
-import cors from "cors"
-import userRoutes from './routes/users.js'
+import router from './src/routes/routes.js' 
+import cors from 'cors'
 import session from "express-session"
-import fileUpload from "express-fileupload"
-import { fstat } from "fs"
 
 
-// import pash from "pash"
-
-const app = express()
-const port = 9000;
+const app = express();
 
 app.use(session({secret : 'shauidxbgsaiuxsavbxsiauxvxuiaxvsaxuisavasui'}))
 app.use(express.json())
-// app.use(fileUpload({
-//     useTempFiles: true,
-//     tempFileDir: pash.join(__dirname, 'temp')
-// }))
+
+const port = 9000;
 
 app.use(cors())
 
-// app.use('/test', userRoutes) // dataBase
+// routers
 
-// tests 
+app.get('/quizzes', router)
+
+app.get('/users', router)
+
 app.use('/test', (req,res) =>{
     res.json([
      {
@@ -104,11 +100,6 @@ app.use('/test', (req,res) =>{
     ])
 })
 
-
 app.listen(port,() =>{
     console.log('rodando na port')
 })
-
-
-
-
