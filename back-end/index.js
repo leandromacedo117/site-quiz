@@ -29,7 +29,7 @@ app.use('/test', (req,res) =>{
         'id' : 1,
         'quizName' : 'quiz121',
         'numberQuestion' : 3,
-        'LastTimeDone': new Date("2024-01-03"),
+        'LastTimeDone': "2024-01-15",
         'DayToNextRetrieval': 4,
         'nRetrieval': 3,
         'quizzes' : [
@@ -52,7 +52,7 @@ app.use('/test', (req,res) =>{
         'id' : 2,
         'quizName' : 'quiz122',
         'numberQuestion' : 1,
-        'LastTimeDone': new Date("2024-01-11"),
+        'LastTimeDone': "2024-01-04",
         'DayToNextRetrieval': 3,
         'nRetrieval': 2,
         'quizzes' : [
@@ -67,7 +67,7 @@ app.use('/test', (req,res) =>{
         'id' : 3,
         'quizName' : 'quiz123',
         'numberQuestion' : 3,
-        'LastTimeDone': new Date("2024-01-03"),
+        'LastTimeDone': "2024-01-15",
         'DayToNextRetrieval': 4,
         'nRetrieval': 3,
         'quizzes' : [
@@ -90,8 +90,8 @@ app.use('/test', (req,res) =>{
         'id' : 4,
         'quizName' : 'quiz124',
         'numberQuestion' : 1,
-        'LastTimeDone': new Date("2024-01-11"),
-        'DayToNextRetrieval': 3,
+        'LastTimeDone': "2024-01-15",
+        'DayToNextRetrieval': 1,
         'nRetrieval': 2,
         'quizzes' : [
          {

@@ -19,15 +19,19 @@ function Content ({ item }) {
 }
 
 const Card = ({ item, option }) => {
-    const data = new Date("09-01-2023");
-    // console.log(data.getDate())
-    // console.log(item.LastTimeDone);
-    // const a = item.LastTimeDone;
-    // a.setDate(a.getDate() + item.DayToNextRetrieval);
     if (option == "todos") {
         return <Content item={item} />
     }
-    else if (option == "revisao" && a >= data) {
+    if (option == "revisao") {
+        const data = new Date();
+        const a = new Date(item.LastTimeDone);
+        a.setDate(a.getDate() + item.DayToNextRetrieval + 1);
+        console.log(data, a);
+        if (data <= a) {
+            return <Content item={item} />
+        }
+    }
+    if (option == "recentes" && item.LastTimeDone == null) {
         return <Content item={item} />
     }
 }
