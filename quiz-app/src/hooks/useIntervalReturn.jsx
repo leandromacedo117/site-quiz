@@ -53,7 +53,7 @@ const useItervalReturn = () => {
       loginSundayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedSunday <= completedDay ?
-      (loginSundayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginSundayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : sunday }</span></h4>
 
       {/* monday */}
@@ -62,7 +62,7 @@ const useItervalReturn = () => {
       loginMondayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedMonday <= completedDay ?
-      (loginMondayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginMondayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : monday }</span></h4>
 
 
@@ -72,7 +72,7 @@ const useItervalReturn = () => {
       loginTuesdayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedTuesday <= completedDay ?
-      (loginTuesdayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginTuesdayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : tuesday }</span></h4>
 
       {/* wednesday */}
@@ -81,7 +81,7 @@ const useItervalReturn = () => {
       loginWednesdayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedWednesday <= completedDay ?
-      (loginWednesdayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginWednesdayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : wednesday }</span></h4>
 
       {/* thursday */}
@@ -90,7 +90,7 @@ const useItervalReturn = () => {
       loginThursdayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedThursday <= completedDay ?
-      (loginThursdayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginThursdayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : thursday }</span></h4>
 
       {/* friday  */}
@@ -99,7 +99,7 @@ const useItervalReturn = () => {
       loginFridayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedFriday <= completedDay ?
-      (loginFridayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginFridayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : friday }</span></h4>
 
       {/* saturday */}
@@ -108,7 +108,7 @@ const useItervalReturn = () => {
       loginSaturdayCompleted ?  ' day-num-h4  finally-day' :
       ' day-num-h4 incomplete-day' : 'day-num-h4'
       }> <span>{ finishedSaturday <= completedDay ?
-      (loginSaturdayCompleted ? <AiOutlineClose/> : <VscCheckAll/>)
+      (loginSaturdayCompleted ? <VscCheckAll/> : <AiOutlineClose/>)
       : saturday }</span></h4>  
     </div>
     
