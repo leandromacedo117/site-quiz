@@ -2,8 +2,9 @@ import { useRef, useState } from 'react';
 import '../style/Todo.css'
 import API from '../data/api';
 import Card from './Card.jsx';
+import CreateButton from "./CreateButton.jsx"
 
-const Todo = () => {
+const Todo = ( {isCreate} ) => {
   const dataFromApi = API()
 
   const [recentes, setRecentes] = useState(false)
@@ -41,6 +42,11 @@ const Todo = () => {
           <li className="list-name button-list" onClick={todosOnclick}  style={{backgroundColor: '#202020'}} ><p  className={todos ? 'color-green' : ''}>Todos</p></li>
           <li className="list-name button-list" onClick={revisaoOnclick}  style={{backgroundColor: '#202020'}}><p  className={revisao ? 'color-green' : ''}>Revisão</p></li>
         </ul>
+      </div>
+      <div>
+        {
+          isCreate ? ( <CreateButton/> ) : null
+        }
       </div>
       {dataFromApi.map(item => (
         <div key={item.id}>

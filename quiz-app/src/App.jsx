@@ -4,6 +4,7 @@ import Create from "./pages/Create";
 import Graph from "./pages/Graph";
 import Config from "./pages/Config";
 import Options from "./componentes/Options";
+import CreateQuiz from "./pages/CreateQuiz";
 
 
 import {
@@ -29,6 +30,10 @@ function App() {
                     <Route
                         path="/create"
                         element={<Create />}
+                    />
+                    <Route
+                        path="/create/create_quiz"
+                        element={<CreateQuiz/>}
                     />
                     <Route
                         path="/graph"

@@ -1,10 +1,12 @@
-import UseProgress from '../hooks/useProgressBar'
-function Create() {
+import Todo from "../componentes/Todo.jsx"
 
+function Create() {
   return (
-    <center>
-      <UseProgress></UseProgress>
-    </center>
+    <div>
+      <Todo 
+        isCreate={true}
+      />
+    </div>
   )
 }
 
