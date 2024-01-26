@@ -15,7 +15,9 @@ function Home() {
       </header>
       <main>
         <div className="todo">
-          <Todo></Todo>
+          <Todo 
+            isCreate={false}
+          />
         </div>
       </main>   
     </div>

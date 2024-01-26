@@ -24,10 +24,10 @@ const Card = ({ item, option }) => {
     }
     if (option == "revisao") {
         const data = new Date();
-        const a = new Date(item.LastTimeDone);
-        a.setDate(a.getDate() + item.DayToNextRetrieval + 1);
-        console.log(data, a);
-        if (data <= a) {
+        const lastTimeDone = new Date(item.LastTimeDone);
+        lastTimeDone.setDate(lastTimeDone.getDate() + item.DayToNextRetrieval + 1);
+        console.log(data, lastTimeDone);
+        if (data >= lastTimeDone) {
             return <Content item={item} />
         }
     }

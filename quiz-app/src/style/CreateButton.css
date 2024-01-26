@@ -1,0 +1,22 @@
+.CreateButton {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 2px solid #06E00E;
+    cursor: pointer;
+    padding: 24px;
+    margin: 20px 0 0px 0;
+    color: #000000;
+}
+.CreateButton:hover {
+    background-color: #06E00E;
+}
+.CreateButton_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.text {
+    font-size: 30px;
+    font-weight: bold;
+}
