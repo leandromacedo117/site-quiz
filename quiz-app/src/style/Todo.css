@@ -47,15 +47,16 @@
 
 .list-todo{
     /* padding-top: 40px; */
-   
+    color: black;
     font-size: 2rem;
     border-radius: 20px;
-
+    border: 2px black;
 }
 .list-content-todo{
     
-   background-color: rgb(255, 255, 255);
-   border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 2px black;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -63,6 +64,9 @@
     padding:10px ;
     margin: 20px 0 0px 0 ;
     
+}
+.list-content-todo:hover {
+    background-color: #06E00E;
 }
 
 

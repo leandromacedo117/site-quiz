@@ -30,16 +30,16 @@ app.use('/test', (req,res) =>{
         'nRetrieval': 3,
         'quizzes' : [
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta1?",
+            Answer: "Resposta1!"
          },
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta2?",
+            Answer: "Resposta2!"
          },
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta3?",
+            Answer: "Resposta3!"
          }
         ]
      },
@@ -53,8 +53,8 @@ app.use('/test', (req,res) =>{
         'nRetrieval': 2,
         'quizzes' : [
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta1?",
+            Answer: "Resposta1!"
          }
         ]
      },
@@ -68,16 +68,16 @@ app.use('/test', (req,res) =>{
         'nRetrieval': 3,
         'quizzes' : [
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta1?",
+            Answer: "Resposta1!"
          },
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta2?",
+            Answer: "Resposta2!"
          },
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta3?",
+            Answer: "Resposta3!"
          }
         ]
      },
@@ -91,8 +91,8 @@ app.use('/test', (req,res) =>{
         'nRetrieval': 2,
         'quizzes' : [
          {
-            Question: "Pergunta?",
-            Answer: "Resposta!"
+            Question: "Pergunta1?",
+            Answer: "Resposta1!"
          }
         ]
      },

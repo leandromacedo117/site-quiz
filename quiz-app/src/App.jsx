@@ -5,6 +5,8 @@ import Graph from "./pages/Graph";
 import Config from "./pages/Config";
 import Options from "./componentes/Options";
 import CreateQuiz from "./pages/CreateQuiz";
+import IniciarQuiz from './pages/IniciarQuiz';
+import QuestionAnswer from './pages/QuestionAnswer';
 
 
 import {
@@ -26,6 +28,14 @@ function App() {
                         exact
                         path="/"
                         element={<Home />}
+                    />
+                    <Route
+                        path="/IniciarQuiz"
+                        element={<IniciarQuiz />}
+                    />
+                    <Route
+                        path="/IniciarQuiz/QuestionAnswer"
+                        element={<QuestionAnswer />}
                     />
                     <Route
                         path="/create"

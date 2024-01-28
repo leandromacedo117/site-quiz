@@ -10,6 +10,7 @@ function Home() {
       {/* <UseloginAntentication></UseloginAntentication> */}
       <header className="time-day">
         <div className="container-day">
+          {console.log("Aqui")}
           <Day></Day>
         </div>
       </header>
