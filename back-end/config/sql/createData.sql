@@ -6,13 +6,13 @@ CREATE DATABASE appQuizDb
 
 -- creating tables
 CREATE TABLE quizInformation(
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     quizName VARCHAR(16),
     numberQuestion INT,
     LastTimeDone DATE,
     DayToNextRetrieval INT,
-    descriptionQuiz TEXT
-
+    descriptionQuiz TEXT,
+    category TEXT
     
 );
 
@@ -20,9 +20,10 @@ CREATE TABLE quizInformation(
 CREATE TABLE quizzes(
     id INTEGER PRIMARY KEY,
     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-    uploadAt  DATETIME,
+    uploadAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     questionsAndAnswers JSON
 );
+
 
 
 
