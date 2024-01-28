@@ -1,0 +1,133 @@
+.CreateQuiz{
+    color: #fff;
+}
+
+.quiz-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-icon{
+    padding-top: 30px;
+}
+.quiz-icon span{
+    margin-left: 20px;
+    padding-top: 20px;
+    background-color: #06E00E;
+    padding:10px;
+    border-radius: 100%;
+}
+
+.quiz-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .45rem;
+}
+
+.form-container{
+    margin-top: 20px;
+}
+
+.name-function{
+    font-size: 1.2rem;
+    padding-top: .8rem;
+    padding-bottom: .4rem;
+}
+
+.quiz-form input {
+    width: 90%;
+    
+}
+
+.input-name{
+    padding: 10px;
+    border-radius: 7px;
+    font-size: .85rem;
+}
+
+.input-descri{
+    width: 90%;
+    padding: 20px 10px;
+    border-radius: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+}
+
+.quiz-container p{
+    padding-top: .8rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: .4rem;
+}
+
+.category-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.quiz-container .category {
+    margin-top: 10px;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 4px;
+    width: 90vw;
+  
+   
+}
+
+#category {
+    font-size: 0.9rem;
+    padding: 10px ;
+    text-align: left;
+    background-color: #06E00E;
+    border-radius: 0px 0px 10px 10px;
+    width: 90vw;
+    
+    
+}
+
+#category option {
+    background-color: #fff;
+}
+
+
+
+
+.button-create-quiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-create-quiz-div {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 10px 15px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    border: 2px solid #06E00E;
+    border-radius: 20px;
+    
+}
+
+.button-create-quiz-div:hover {
+    background-color: #06E00E;
+    border: 2px solid #fff;
+    
+}
+
+.button-create-quiz-div span {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    margin-top: 2px;
+
+}
+
+

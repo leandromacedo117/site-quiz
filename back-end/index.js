@@ -19,6 +19,8 @@ app.get('/quizzes', router)
 
 app.get('/users', router)
 
+app.post('/createquiz', router)
+
 app.use('/test', (req,res) =>{
     res.json([
      {
@@ -99,6 +101,8 @@ app.use('/test', (req,res) =>{
 
     ])
 })
+
+
 
 app.listen(port,() =>{
     console.log('rodando na port')
