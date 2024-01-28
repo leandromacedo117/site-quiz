@@ -1,20 +1,23 @@
 import { HiAcademicCap } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function Content ({ item }) {
     return (
-        <div className="list-todo">
-            <div className="list-content-todo">       
-                <div className="banner-quiz">
-                    <div className="icon-studies">
-                        <HiAcademicCap  />
+        <Link to="/IniciarQuiz" state={ item }>
+            <div className="list-todo">
+                <div className="list-content-todo">       
+                    <div className="banner-quiz">
+                        <div className="icon-studies">
+                            <HiAcademicCap  />
+                        </div>
+                        <h3 className="name-quiz-h">
+                            <p>{item.quizName}</p>  
+                        </h3>
                     </div>
-                    <h3 className="name-quiz-h">
-                        <p>{item.quizName}</p>  
-                    </h3>
+                    <p>{item.numberQuestion}</p>
                 </div>
-                <p>{item.numberQuestion}</p>
             </div>
-        </div>
+        </Link>
     )
 }
 
