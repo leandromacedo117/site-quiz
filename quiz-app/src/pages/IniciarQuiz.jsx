@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import Button from '../componentes/Button';
+import Header from '../componentes/Header';
 import "../style/IniciarQuiz.css";
-import back from "../assets/Back.png"
 
 export default function IniciarQuiz () {
     const location = useLocation();
@@ -10,17 +10,12 @@ export default function IniciarQuiz () {
 
     return(
         <div className="body">
-            <div className="header">
-                <div className="back">
-                    <Link to="/">
-                        <img src={back} width="40"/>
-                    </Link>
-                </div>
-                <p className="quizName">{ item.quizName }</p>
-            </div>
+            <Header 
+                item={item}
+            />
             <div className="buttons">
                 <div className="Iniciar">
-                    <Link to="/IniciarQuiz/QuestionAnswer">
+                    <Link to="/IniciarQuiz/QuestionAnswer" state={ item }>
                         <Button text="Iniciar Quiz"/>
                     </Link>
                 </div>

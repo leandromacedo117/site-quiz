@@ -1,0 +1,11 @@
+.back {
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.quizName {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}

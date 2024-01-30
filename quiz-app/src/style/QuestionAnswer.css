@@ -1,0 +1,26 @@
+.QuestionAnswer {
+    padding: 10px;
+    height: 100vh;
+}
+.Answer {
+    margin-bottom: 200px;
+}
+.QuestionAnswer_content p{
+    width:100%;
+    height:100%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.QuestionAnswer_content {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tip {
+    color: gray;
+    font-size: 20px;
+    text-align:center;
+}
