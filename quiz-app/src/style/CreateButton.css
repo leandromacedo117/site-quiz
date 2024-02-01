@@ -6,11 +6,23 @@
     padding: 24px;
     margin: 20px 0 0px 0;
     color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .CreateButton:hover {
     background-color: #06E00E;
 }
 .CreateButton_content {
+    background-color: #fff;
+    border: none;
+}
+
+.CreateButton_content:hover{
+    background-color: #06E00E;
+}
+
+.CreateButton_content div {
     display: flex;
     flex-direction: row;
     align-items: center;

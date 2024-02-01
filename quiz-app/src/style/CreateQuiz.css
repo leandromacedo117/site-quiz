@@ -9,9 +9,20 @@
 
 .quiz-icon{
     padding-top: 30px;
+    display: flex;
+    align-items: center;
 }
+
+.quiz-icon h4{
+    color: #fff;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-right: 25vw;
+}
+
 .quiz-icon span{
     margin-left: 20px;
+    margin-right: 20vw;
     padding-top: 20px;
     background-color: #06E00E;
     padding:10px;
@@ -86,7 +97,7 @@
     background-color: #06E00E;
     border-radius: 0px 0px 10px 10px;
     width: 90vw;
-    
+    margin-bottom: 20px;
     
 }
 

@@ -3,6 +3,8 @@ import '../style/Todo.css'
 import API from '../data/api';
 import Card from './Card.jsx';
 import CreateButton from "./CreateButton.jsx"
+import { Link } from "react-router-dom";
+
 
 const Todo = ( {isCreate} ) => {
   const dataFromApi = API()
@@ -45,7 +47,9 @@ const Todo = ( {isCreate} ) => {
       </div>
       <div>
         {
-          isCreate ? ( <CreateButton/> ) : null
+          isCreate ? ( <Link to="/create/create_quiz">
+            <CreateButton text='Criar'/>
+          </Link>) : null
         }
       </div>
       {dataFromApi.map(item => (
