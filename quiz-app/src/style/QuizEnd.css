@@ -1,0 +1,16 @@
+.QuizEnd {
+    height: 100%;
+}
+.QuizEnd_content {
+    display: flex;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.Congrats {
+    text-align: center;
+    color: white;
+    font-size: 44px;
+}
