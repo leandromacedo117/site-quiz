@@ -2,15 +2,17 @@ import { IoIosAdd } from "react-icons/io";
 import { Link } from "react-router-dom";
 import "../style/CreateButton.css"
 
-export default function CreateButton() {
+export default function CreateButton({text}) {
     return(
-        <Link to="/create/create_quiz">
+        // <Link to="/create/create_quiz">
             <div className="CreateButton">
-                <div className="CreateButton_content">
-                    <IoIosAdd size={35}/>
-                    <p className="text">Criar</p>
-                </div>
+                <button className="CreateButton_content" type="submit">
+                    <div>
+                        <IoIosAdd size={35}/>
+                        <p className="text">{text}</p>
+                    </div>
+                </button>
             </div>
-        </Link>
+        // </Link>
     )
 }

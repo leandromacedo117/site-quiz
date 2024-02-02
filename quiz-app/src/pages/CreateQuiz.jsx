@@ -4,6 +4,11 @@ import axios from 'axios';
 import '../style/CreateQuiz.css'
 import { GoArrowLeft } from "react-icons/go";
 import { HiPlus } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import CreateButton from '../componentes/CreateButton';
+import ReturnPage from '../componentes/ReturnPage';
+
+
 
 const CreateQuiz = () => {
   const [quizValues, setQuizValues] = useState({
@@ -28,11 +33,9 @@ const CreateQuiz = () => {
   return (
     <div className="CreateQuiz">
         <div className="quiz-container" onSubmit={sendData}>
-            <div className='quiz-icon'>
-                <span>
-                    <GoArrowLeft/>
-                </span>
-            </div>
+            <Link to = '/Create'>
+                <ReturnPage/>
+            </Link>
             <form method="" className='form-container'>
                 <div className="quiz-form">
                     <label htmlFor="Perguta" className='name-function'>Nome do Quiz</label>
@@ -65,14 +68,7 @@ const CreateQuiz = () => {
                     </select>
                 </div>
             </div>
-            <div className='button-create-quiz'>
-                <button className="button-create-quiz-div"  type='submit'>
-                    <span>
-                        <HiPlus/>
-                    </span>
-                    <h3>Criar Quiz</h3>
-                </button>
-            </div>
+            <CreateButton text='Criar Quiz'/>
 
             </form>
             
