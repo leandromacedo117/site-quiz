@@ -7,6 +7,7 @@ import Options from "./componentes/Options";
 import CreateQuiz from "./pages/CreateQuiz";
 import IniciarQuiz from './pages/IniciarQuiz';
 import QuestionAnswer from './pages/QuestionAnswer';
+import QuizEnd from './pages/QuizEnd';
 
 
 import {
@@ -36,6 +37,10 @@ function App() {
                     <Route
                         path="/IniciarQuiz/QuestionAnswer"
                         element={<QuestionAnswer />}
+                    />
+                    <Route
+                        path="/IniciarQuiz/QuestionAnswer/QuizEnd"
+                        element={<QuizEnd/>}
                     />
                     <Route
                         path="/create"

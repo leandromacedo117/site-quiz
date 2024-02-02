@@ -1,5 +1,4 @@
-import { useLocation } from 'react-router-dom'
-import { Link } from "react-router-dom";
+import { useLocation, Link } from 'react-router-dom'
 import Button from '../componentes/Button';
 import Header from '../componentes/Header';
 import "../style/IniciarQuiz.css";

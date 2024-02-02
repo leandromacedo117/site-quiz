@@ -1,13 +1,23 @@
+.Main {
+    width: 100%;
+    height: 100%;
+}
 .QuestionAnswer {
     padding: 10px;
-    height: 100vh;
+    height: 90vh;
+}
+.Question {
+    text-align: center;
 }
 .Answer {
-    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .QuestionAnswer_content p{
-    width:100%;
-    height:100%;
     color: white;
     font-size: 30px;
     text-align: center;
@@ -19,8 +29,37 @@
     justify-content: center;
     align-items: center;
 }
+.Answer_content {
+    height:100%;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+@media only screen and (min-device-width: 500px) {
+    .Answer_content {
+        height:100%;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
 .tip {
     color: gray;
     font-size: 20px;
     text-align:center;
+}
+.DifficultButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row-reverse;
 }
