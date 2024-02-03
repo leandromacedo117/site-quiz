@@ -22,7 +22,7 @@ const CreateQuiz = () => {
     }
     
     const sendData = (e) => { 
-    e.preventDefault();
+    // e.preventDefault();
     axios.post('http://localhost:9000/createquiz', quizValues)
     .then(res => console.log(res))
     .catch(err => console.log(err));
@@ -68,13 +68,17 @@ const CreateQuiz = () => {
                     </select>
                 </div>
             </div>
-            <CreateButton text='Criar Quiz'/>
+            <Link to='/create/questions' onClick={sendData}>
+                <CreateButton text='Criar Quiz'  />
+            </Link>
 
             </form>
             
         </div>
     </div>
   )
+  
 }
+
 
 export default CreateQuiz

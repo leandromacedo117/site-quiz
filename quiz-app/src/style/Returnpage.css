@@ -1,0 +1,24 @@
+.quiz-icon {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.quiz-icon h4 {
+    color: #fff;
+    font-size: 2.1rem;
+    text-align: center;
+    flex-grow: 1; /* Ocupa o espaço restante */
+}
+
+.quiz-icon div {
+    padding-left: 15px;
+}
+
+.quiz-icon div span {
+    background-color: #06E00E;
+    padding: 12px;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    font-weight: bold;
+}

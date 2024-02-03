@@ -7,28 +7,6 @@
     flex-direction: column;
 }
 
-.quiz-icon{
-    padding-top: 30px;
-    display: flex;
-    align-items: center;
-}
-
-.quiz-icon h4{
-    color: #fff;
-    font-size: 1.9rem;
-    text-align: center;
-    margin-right: 25vw;
-}
-
-.quiz-icon span{
-    margin-left: 20px;
-    margin-right: 20vw;
-    padding-top: 20px;
-    background-color: #06E00E;
-    padding:10px;
-    border-radius: 100%;
-}
-
 .quiz-form{
     display: flex;
     align-items: center;
