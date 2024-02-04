@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { GoArrowLeft } from "react-icons/go";
+import '../style/ReturnPage.css';
 
-
-const ReturnPage = ({quizName}) => {
+const ReturnPage = ({ quizName }) => {
   return (
-    <div className='quiz-icon' >
+    <div className='quiz-icon'>
+      <div>
         <span>
-            <GoArrowLeft/>
+          <GoArrowLeft />
         </span>
-        <h4>{quizName}</h4>
+      </div>
+      <h4>{quizName}</h4>
     </div>
-  )
-}
+  );
+};
 
-export default ReturnPage
+export default ReturnPage;

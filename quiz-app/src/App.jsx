@@ -8,7 +8,7 @@ import CreateQuiz from "./pages/CreateQuiz";
 import IniciarQuiz from './pages/IniciarQuiz';
 import QuestionAnswer from './pages/QuestionAnswer';
 import QuizEnd from './pages/QuizEnd';
-
+import CreateQuestions from './pages/CreateQuestions'
 
 import {
   BrowserRouter,
@@ -49,6 +49,10 @@ function App() {
                     <Route
                         path="/create/create_quiz"
                         element={<CreateQuiz/>}
+                    />
+                    <Route
+                        path="/create/questions"
+                        element={<CreateQuestions/>}
                     />
                     <Route
                         path="/graph"
