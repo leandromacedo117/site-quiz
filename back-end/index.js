@@ -27,21 +27,27 @@ app.use('/test', (req,res) =>{
         'id' : 1,
         'quizName' : 'quiz121',
         'numberQuestion' : 3,
-        'LastTimeDone': "2024-01-15",
-        'DayToNextRetrieval': 4,
-        'nRetrieval': 3,
-        'quizzes' : [
+        'quizes' : [
          {
             Question: "Pergunta1?",
-            Answer: "Resposta1!"
+            Answer: "Resposta1!",
+            'LastTimeDone': "2024-05-27",
+            'DayToNextRetrieval': 4,
+            'nRetrieval': 3
          },
          {
             Question: "Pergunta2?",
-            Answer: "Resposta2!"
+            Answer: "Resposta2!",
+            'LastTimeDone': "2024-01-15",
+            'DayToNextRetrieval': 4,
+            'nRetrieval': 3
          },
          {
             Question: "Pergunta3?",
-            Answer: "Resposta3!"
+            Answer: "Resposta3!",
+            'LastTimeDone': "2024-02-06",
+            'DayToNextRetrieval': 1,
+            'nRetrieval': 3
          }
         ]
      },
@@ -50,13 +56,13 @@ app.use('/test', (req,res) =>{
         'id' : 2,
         'quizName' : 'quiz122',
         'numberQuestion' : 1,
-        'LastTimeDone': "2024-01-04",
-        'DayToNextRetrieval': 3,
-        'nRetrieval': 2,
-        'quizzes' : [
+        'quizes' : [
          {
             Question: "Pergunta1?",
-            Answer: "Resposta1!"
+            Answer: "Resposta1!",
+            'LastTimeDone': "2024-07-28",
+            'DayToNextRetrieval': 1,
+            'nRetrieval': 3
          }
         ]
      },
@@ -65,21 +71,27 @@ app.use('/test', (req,res) =>{
         'id' : 3,
         'quizName' : 'quiz123',
         'numberQuestion' : 3,
-        'LastTimeDone': "2024-01-15",
-        'DayToNextRetrieval': 4,
-        'nRetrieval': 3,
-        'quizzes' : [
+        'quizes' : [
          {
             Question: "Pergunta1?",
-            Answer: "Resposta1!"
+            Answer: "Resposta1!",
+            'LastTimeDone': "2024-07-20",
+            'DayToNextRetrieval': 4,
+            'nRetrieval': 3
          },
          {
             Question: "Pergunta2?",
-            Answer: "Resposta2!"
+            Answer: "Resposta2!",
+            'LastTimeDone': "2024-06-15",
+            'DayToNextRetrieval': 4,
+            'nRetrieval': 3
          },
          {
             Question: "Pergunta3?",
-            Answer: "Resposta3!"
+            Answer: "Resposta3!",
+            'LastTimeDone': "2024-01-15",
+            'DayToNextRetrieval': 4,
+            'nRetrieval': 3
          }
         ]
      },
@@ -88,13 +100,13 @@ app.use('/test', (req,res) =>{
         'id' : 4,
         'quizName' : 'quiz124',
         'numberQuestion' : 1,
-        'LastTimeDone': "2024-01-15",
-        'DayToNextRetrieval': 1,
-        'nRetrieval': 2,
-        'quizzes' : [
+        'quizes' : [
          {
             Question: "Pergunta1?",
-            Answer: "Resposta1!"
+            Answer: "Resposta1!",
+            'LastTimeDone': "2024-01-15",
+            'DayToNextRetrieval': 4,
+            'nRetrieval': 3
          }
         ]
      },

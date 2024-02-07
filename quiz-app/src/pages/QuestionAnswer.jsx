@@ -12,7 +12,7 @@ function ManageQuiz ( {item} ) {
 
     function changeIndex () {
         if (isSecondClick) {
-            if (index+1 == item.quizzes.length){
+            if (index+1 == item.quizes.length){
                 navigate('/IniciarQuiz/QuestionAnswer/QuizEnd', { state: item })
             }else {
                 setIndex(index+1);
@@ -74,7 +74,7 @@ function ManageQuiz ( {item} ) {
     return (
         <div className="Main">
             {
-                isSecondClick ? <Answer obj={item.quizzes[index]}/> : <Question obj={item.quizzes[index]}/>
+                isSecondClick ? <Answer obj={item.quizes[index]}/> : <Question obj={item.quizes[index]}/>
             }
         </div>
     )
