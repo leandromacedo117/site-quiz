@@ -12,8 +12,8 @@ CREATE TABLE quizInformation(
     LastTimeDone DATE,
     DayToNextRetrieval INT,
     descriptionQuiz TEXT,
-    category TEXT
-    
+    category TEXT,
+    quiz_json JSON
 );
 
 
@@ -23,6 +23,7 @@ CREATE TABLE quizzes(
     uploadAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     questionsAndAnswers JSON
 );
+
 
 
 

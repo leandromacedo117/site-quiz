@@ -16,10 +16,16 @@ app.use(cors())
 // routers
 
 app.get('/quizzes', router)
-
 app.get('/users', router)
+app.post("/numberQuestion", router)
+
+app.post('/json', router)
 
 app.post('/createquiz', router)
+
+app.post('/question', router)
+
+
 
 app.use('/test', (req,res) =>{
     res.json([
