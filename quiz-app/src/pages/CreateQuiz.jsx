@@ -14,7 +14,11 @@ const CreateQuiz = () => {
   const [quizValues, setQuizValues] = useState({
     quizName: '',
     description: '',
-    category: ''
+    category: '',
+    numberQuestion: 0,
+    LastTimeDone: null ,
+    DayToNextRetrieval: 0,
+    quiz_json: '{}'
   })
 
   const getInformations = (event) => {
@@ -71,6 +75,7 @@ const CreateQuiz = () => {
             <Link to='/create/questions' onClick={sendData}>
                 <CreateButton text='Criar Quiz'  />
             </Link>
+
 
             </form>
             
