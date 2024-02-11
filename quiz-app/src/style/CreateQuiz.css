@@ -119,4 +119,8 @@
 
 }
 
+.input-void-err {
+    border: 2px solid red;
+}
+
 

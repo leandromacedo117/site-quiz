@@ -1,9 +1,9 @@
 import {dbCreateQuiz} from '../../config/db/dbCreateQuiz.js'
 
 export const  getJson = (req,res) => {
-    const jsonSql = "SELECT quiz_json FROM quizInformation WHERE id = ?";
+    const jsonSql = "SELECT quiz_json FROM quizInformation";
 
-    dbCreateQuiz.query(jsonSql, [req.body.last], (err, date) => {
+    dbCreateQuiz.query(jsonSql, /*[req.body.last],*/ (err, date) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Erro interno do servidor' });
