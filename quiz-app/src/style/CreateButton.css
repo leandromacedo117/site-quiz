@@ -1,22 +1,20 @@
 .CreateButton {
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    border: 2px solid #06E00E;
-    cursor: pointer;
-    padding: 24px;
-    margin: 20px 0 0px 0;
-    color: #000000;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
 }
-.CreateButton:hover {
-    background-color: #06E00E;
-}
+
 .CreateButton_content {
-    background-color: #fff;
-    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 2px solid #06E00E;
+    cursor: pointer;
+    width: 80vw;
+    padding: 24px;
+    margin: 20px 0 0px 0;
+    color: #000000;
 }
 
 .CreateButton_content:hover{

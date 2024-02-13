@@ -19,6 +19,6 @@ router.post('/createquiz', setCreatequiz)
 
 router.post('/question', setQuestionAndAnswer)
 
-router.post('/json', getJson)
+router.get('/json', getJson)
 
 export default router

@@ -19,7 +19,7 @@ app.get('/quizzes', router)
 app.get('/users', router)
 app.post("/numberQuestion", router)
 
-app.post('/json', router)
+app.get('/json', router)
 
 app.post('/createquiz', router)
 

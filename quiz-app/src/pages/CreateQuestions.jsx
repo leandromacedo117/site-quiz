@@ -6,8 +6,9 @@ import ReturnPage from '../componentes/ReturnPage';
 import CreateButton from '../componentes/CreateButton';
 
 const CreateQuestions = () => {
-    const [lastName, setLastName] = useState(null);
+    const [inputValue, setInputValue] = useState(true)
     const [finallyQuiz, setFinallyQuiz] = useState(false)
+    const [lastName, setLastName] = useState(null);
     const [numberQuestions, setNumberQuestions] = useState({
         numberQuestion: 1
     })
@@ -26,6 +27,9 @@ const CreateQuestions = () => {
     const getNumberQuestionValues = (event) => {
         console.log(numberQuestions)
         event.preventDefault()
+        if(formValues.question.trim() == '' && formValues.answer.trim() == ""){
+            setInputValue(false)
+        }
         axios.post('http://localhost:9000/numberQuestion', numberQuestions)
         .then(res => console.log(res))
         .catch(err => console.log(err));
@@ -58,17 +62,19 @@ const CreateQuestions = () => {
         const sendData = (event) => {
             event.preventDefault();
 
-            axios.post('http://localhost:9000/question', (formValues))
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+            if (formValues.question.trim() == "" || formValues.answer.trim() == ''){
+                setInputValue(false)
+            } else {
+                axios.post('http://localhost:9000/question', (formValues))
+                .then(res => console.log(res))
+                .catch(err => console.log(err));
             
-            // Incremente o ID para a próxima pergunta
-            setFormValues((prev) => ({ ...prev, ids: prev.ids + 1 }));
-            
-            setNumberQuestions((prev) => ({ ...prev, numberQuestion : prev.numberQuestion + 1 }))
-            console.log(numberQuestions)
-
-            setFinallyQuiz(true)
+                // Incremente o ID para a próxima pergunta
+                setFormValues((prev) => ({ ...prev, ids: prev.ids + 1 }));
+                setNumberQuestions((prev) => ({ ...prev, numberQuestion : prev.numberQuestion + 1 }))
+                setFinallyQuiz(true)
+                console.log(numberQuestions)
+            }
 
         }
 
@@ -84,7 +90,7 @@ const CreateQuestions = () => {
                     <div className='form-add'>
                         <label htmlFor="question">Pergunta</label>
                         <textarea
-                            className=''
+                            className={inputValue ? '' : 'input-void-err' }
                             name="question"
                             rows="5"
                             onChange={getInformations}
@@ -93,7 +99,7 @@ const CreateQuestions = () => {
                     <div className='form-add'>
                         <label htmlFor="answer">Resposta</label>
                         <textarea
-                            className=''
+                            className={inputValue ? '' : 'input-void-err'}
                             name="answer"
                             rows="5"
                             onChange={getInformations}
