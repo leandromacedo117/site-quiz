@@ -6,7 +6,7 @@ import Config from "./pages/Config";
 import Options from "./componentes/Options";
 import CreateQuiz from "./pages/CreateQuiz";
 import IniciarQuiz from './pages/IniciarQuiz';
-import QuestionAnswer from './pages/QuestionAnswer';
+import QuestionAnswer from './pages/QuestionAndAnswer';
 import QuizEnd from './pages/QuizEnd';
 import CreateQuestions from './pages/CreateQuestions'
 

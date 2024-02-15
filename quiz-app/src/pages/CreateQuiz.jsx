@@ -17,8 +17,6 @@ const CreateQuiz = () => {
     description: '',
     category: '',
     numberQuestion: 0,
-    LastTimeDone: "2022-05-12" ,
-    DayToNextRetrieval: 0,
     quiz_json: '{}'
   })
 

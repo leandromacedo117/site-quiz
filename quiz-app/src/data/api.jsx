@@ -8,7 +8,7 @@ const DataFetchingComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await api.get('/test');
+        const res = await api.get('/quizzes');
         setDataFromApi(res.data);
         console.log(res.data);
       } catch (error) {
