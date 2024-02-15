@@ -4,16 +4,24 @@ import {useNavigate} from 'react-router-dom';
 import "../style/QuestionAnswer.css";
 import Header from "../componentes/Header";
 import ReviewButton from "../componentes/ReviewButton";
+import QuizApi from '../data/quiz';
+import { useEffect } from 'react';
+import axios from 'axios';
 
-function ManageQuiz ( {item} ) {
+
+
+function ManageQuiz (  ) {
     const [index, setIndex] = useState(0)
     const [isSecondClick, setisSecondClick] = useState(false)
     const navigate = useNavigate();
+    // const [itemQuiz, setItemQuiz] = useState([])
+    const  quizFromApi = QuizApi();
+
 
     function changeIndex () {
         if (isSecondClick) {
-            if (index+1 == item.quizes.length){
-                navigate('/IniciarQuiz/QuestionAnswer/QuizEnd', { state: item })
+            if (index+1 == quizFromApi.length){
+                navigate('/IniciarQuiz/QuestionAnswer/QuizEnd', { state: quizFromApi })
             }else {
                 setIndex(index+1);
             }
@@ -28,7 +36,8 @@ function ManageQuiz ( {item} ) {
         return (
             <div className="QuestionAnswer_content" onClick={changeIndex}>
                 <div className="Question">
-                    <p>{obj.Question}</p>
+                    {/* {lastId === 0 ? console.log('careegando') : console.log(lastId[lastId.length].id)} */}
+                    <p>{obj === undefined ? null : obj.Question}</p>
                 </div>
             </div>
         )
@@ -38,8 +47,8 @@ function ManageQuiz ( {item} ) {
             <div className="QuestionAnswer_content">
                 <div className="Answer">
                     <div className="Answer_content">
-                        <p>{obj.Question}</p>
-                        <p>{obj.Answer}</p>
+                        <p>{obj === undefined ? null : obj.Question}</p>
+                        <p>{obj === undefined ? null : obj.Answer}</p>
                     </div>
                     <div className="DifficultButtons">
                         <div onClick={changeIndex}>
@@ -74,27 +83,39 @@ function ManageQuiz ( {item} ) {
     return (
         <div className="Main">
             {
-                isSecondClick ? <Answer obj={item.quizes[index]}/> : <Question obj={item.quizes[index]}/>
+                isSecondClick ? <Answer obj={quizFromApi[index]}/> : <Question obj={quizFromApi[index]}/>
             }
         </div>
     )
     
 }
 
-export default function QuestionAnswer () {
-    const location = useLocation();
-    const item = location.state;
-    
+ export default function QuestionAnswer () {
+    // const [item, setItem] = useState('')
+    // useEffect(() => {
+    //     axios.get('http://localhost:9000/quizzes')
+    //         .then(res => {
+    //            setItem(res.data);
+    //         })
+    //         .catch(err => console.log(err));
+    // }, []);
+  
+      
 
     return (
         <div className="QuestionAnswer">
-            <Header 
+            {/* <Header 
                 item={item}
-            />
+            /> */}
             <ManageQuiz 
-                item={item}
+                
             />
-            {/* <p className="tip">Click em qualquer lugar para monstrar a resposta</p> */}
+
+            {/* <QuizApi
+                item={item}
+            /> */}
+
+            <p className="tip">Click em qualquer lugar para monstrar a resposta</p>
         </div>
     )
 }

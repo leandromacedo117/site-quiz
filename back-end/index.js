@@ -17,12 +17,11 @@ app.use(cors())
 
 app.get('/quizzes', router)
 app.get('/users', router)
-app.post("/numberQuestion", router)
-
 app.get('/json', router)
+app.get('/quizes_json', router)
 
+app.post("/numberQuestion", router)
 app.post('/createquiz', router)
-
 app.post('/question', router)
 
 
@@ -35,6 +34,7 @@ app.use('/test', (req,res) =>{
         'numberQuestion' : 3,
         'quizes' : [
          {
+            
             Question: "Pergunta1?",
             Answer: "Resposta1!",
             'LastTimeDone': "2024-05-27",

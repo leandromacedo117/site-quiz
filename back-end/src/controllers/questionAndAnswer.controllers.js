@@ -2,11 +2,13 @@ import {dbCreateQuiz} from '../../config/db/dbCreateQuiz.js'
 
 export const setQuestionAndAnswer = (req, res) => {
     // Consulta de inicialização para inserir um objeto JSON vazio na tabela
-    const initJson = "INSERT INTO quizInformation (quiz_json) VALUES ('{}')";
+    const initJson = "INSERT INTO quizInformation (quizes) VALUES ('{}')";
     
     // Consulta de atualização para adicionar um novo objeto JSON ao array JSON existente
-    const setDado = "UPDATE quizInformation SET quiz_json = JSON_ARRAY_APPEND(quiz_json, '$', JSON_OBJECT('id', ?, 'question', ?, 'answer', ?)) WHERE numberQuestion = 0  ";
+    const setDado = "UPDATE quizInformation SET quizes = JSON_ARRAY_APPEND(quizes, '$', JSON_OBJECT( 'Question', ?, 'Answer', ?, 'LastTimeDone', ?,'DayToNextRetrieva', ?, 'nRetrieval', ?)) WHERE numberQuestion = 0  ";
     
+    const deleteObjectVoid = "UPDATE quizInformation SET quizes = JSON_REMOVE(quizes, '$[0]') WHERE JSON_LENGTH(quizes) > 0 AND JSON_TYPE(quizes) = 'ARRAY'"; 
+
     const deleteColun = "DELETE FROM quizInformation WHERE quizName IS NULL"
 
     // Executar as consultas
@@ -15,7 +17,7 @@ export const setQuestionAndAnswer = (req, res) => {
             console.log(err);
             return res.json('err');
         } else {
-            dbCreateQuiz.query(setDado, [req.body.ids, req.body.question, req.body.answer], (err, data) => {
+            dbCreateQuiz.query(setDado, [ req.body.question, req.body.answer,  req.body.LastTimeDone, req.body.DayToNextRetrieval, req.body.nRetrieval], (err, data) => {
                 if (err) {
                     console.log(err);
                     return res.json('err');

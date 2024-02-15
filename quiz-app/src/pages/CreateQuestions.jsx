@@ -16,6 +16,9 @@ const CreateQuestions = () => {
         ids: 1, // Inicialize o ID como 1
         question: '',
         answer: '',
+        LastTimeDone: '2024-07-28',
+        DayToNextRetrieval: 0,
+        nRetrieval: 3,
         lastName: null,
         lastId: null
     });
@@ -25,14 +28,19 @@ const CreateQuestions = () => {
     }
 
     const getNumberQuestionValues = (event) => {
-        console.log(numberQuestions)
+        // console.log(numberQuestions)
         event.preventDefault()
-        if(formValues.question.trim() == '' && formValues.answer.trim() == ""){
+        if(formValues.question.trim() == '' || formValues.answer.trim() == ""){
             setInputValue(false)
-        }
+        } 
+        setNumberQuestions((prev) => ({ ...prev, numberQuestion : prev.numberQuestion -1 }))
+        console.log(numberQuestions)
+        console.log('aa')
         axios.post('http://localhost:9000/numberQuestion', numberQuestions)
         .then(res => console.log(res))
         .catch(err => console.log(err));
+        
+        
     }
     
     useEffect(() => {
@@ -42,6 +50,8 @@ const CreateQuestions = () => {
     const fetchData = async () => {
         try {
             const res = await axios.get('http://localhost:9000/quizzes');
+            // const priId = res.data[0].id
+            // console.log(priId)
             const maxIdItem = res.data.reduce((prev, current) => (
                 prev.id > current.id ? prev : current
                 ));
@@ -71,7 +81,7 @@ const CreateQuestions = () => {
             
                 // Incremente o ID para a próxima pergunta
                 setFormValues((prev) => ({ ...prev, ids: prev.ids + 1 }));
-                setNumberQuestions((prev) => ({ ...prev, numberQuestion : prev.numberQuestion + 1 }))
+                setNumberQuestions((prev) => ({ ...prev, numberQuestion : formValues.ids}))
                 setFinallyQuiz(true)
                 console.log(numberQuestions)
             }

@@ -1,9 +1,9 @@
 import {dbCreateQuiz} from '../../config/db/dbCreateQuiz.js'
 
 export const setCreatequiz= (req,res) => {
-    const setDado = "INSERT INTO  quizinformation (quizName, descriptionQuiz, category, numberQuestion, LastTimeDone, DayToNextRetrieval, quiz_json ) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    const setDado = "INSERT INTO  quizinformation (quizName, descriptionQuiz, category, numberQuestion,quizes ) VALUES (?, ?, ?, ?, ?)";
 
-    dbCreateQuiz.query(setDado, [req.body.quizName, req.body.description, req.body.category, req.body.numberQuestion, req.body.LastTimeDone, req.body.DayToNextRetrieval, req.body.quiz_json], (err, data) => {
+    dbCreateQuiz.query(setDado, [req.body.quizName, req.body.description, req.body.category, req.body.numberQuestion, req.body.quiz_json], (err, data) => {
         if(err) {
             console.log(err)
             return res.json('err ')
