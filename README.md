@@ -1,3 +1,2 @@
-<h1> Site Quiz </h1>
-<br>
-<p> Hello </p>
+# Site-Quiz
+Site web de flashcards para estudantes oferecendo o melhor método de revisão espaçada. O site permite a personalização de quizes próprios usando um sistema de revisão espaçada automática assim acelerando o aprendizado a longo prazo. Gráficos estão disponíveis dentro do site para o acompanhamento do progresso e andamento do aprendizado, além de ferramentas que facilitam na hora de criar e revisar os quizes.
